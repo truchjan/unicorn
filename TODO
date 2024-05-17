@@ -3,8 +3,11 @@
 - vyřešit obrázky
 - backend a frontend na stejné úrovni
 - junit testy
+- zkrátit výpis obrázku v postmanu
+- editace linku - zobrazit alespoň jméno původního obrázku
 
 
 CO CHYBÍ A NEBUDE (vygooglit aspoň jak bych to udělal)
 - validace - be i fe
 - lepší popup okno pro smazání linku - ideálně použít material ui
+- přidat do historie i změnu obrázku
