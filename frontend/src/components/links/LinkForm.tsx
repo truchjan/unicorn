@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom";
 import {useEffect, useState} from "react";
 import {LinkService} from "@/service/linkService";
 import {useForm} from "react-hook-form";
@@ -7,7 +7,7 @@ import {PATH_LINKS} from "@/components/MainRouter";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { GrReturn } from "react-icons/gr";
 import HistoryList from "@/components/history/HistoryList";
-import {handleImageUpload} from "@/utils/handleImage"
+import {handleImageUpload} from "@/utils/handleImage";
 
 const LinkForm = () => {
 

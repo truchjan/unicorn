@@ -8,6 +8,7 @@ import { RiDeleteBinFill } from "react-icons/ri";
 import {LinkService} from "@/service/linkService";
 import {toast} from "react-toastify";
 import {PATH_LINK_FORM} from "@/components/MainRouter";
+import TextTruncate from "react-text-truncate";
 
 interface TableLinkProps {
   link: LinkModel,
@@ -37,11 +38,11 @@ const TableLink = (props: TableLinkProps) => {
       <div className="flex flex-col items-center bg-gray-100 rounded-lg my-4 mb-6 shadow-[0_0_10px_0_rgb(0,0,0,0.3)] w-full">
         <div className="flex items-center mt-4 w-full">
           <h3 className="my-0 pl-4">{props.link.name}</h3>
-          <p className="my-0 pl-4">{props.link.url}</p>
+          <div className="my-0 pl-4 w-1/2"><TextTruncate line={1} text={props.link.url}/></div>
         </div>
 
         <div className="mt-4 w-full">
-          <p className="my-0 px-4">{props.link.description}</p>
+          <div className="my-0 px-4"><TextTruncate line={2} text={props.link.description}/></div>
         </div>
 
         <div className="flex mt-4 pl-4 w-full">

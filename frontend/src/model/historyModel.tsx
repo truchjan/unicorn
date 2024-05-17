@@ -1,4 +1,4 @@
-import { LinkModel } from "@/model/linkModel"
+import { LinkModel } from "@/model/linkModel";
 
 export interface HistoryModel {
   id: number,

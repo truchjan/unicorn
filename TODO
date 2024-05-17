@@ -1,13 +1,15 @@
 - okomentovat BE metody + dokumentace (Swagger/openAPI)
 - návod na spuštění podobně jako v CTD
-- vyřešit obrázky
 - backend a frontend na stejné úrovni
 - junit testy
 - zkrátit výpis obrázku v postmanu
-- editace linku - zobrazit alespoň jméno původního obrázku
+- smazat tento soubor a chyby dát do readme
 
 
 CO CHYBÍ A NEBUDE (vygooglit aspoň jak bych to udělal)
 - validace - be i fe
 - lepší popup okno pro smazání linku - ideálně použít material ui
 - přidat do historie i změnu obrázku
+- v historii by mohl bát časový údaj změny
+- WYSIWYG editor ???
+- chyby, které by odhalilo zevrubnější testování

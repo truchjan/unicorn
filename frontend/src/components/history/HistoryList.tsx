@@ -1,7 +1,7 @@
 import {HistoryModel} from "@/model/historyModel";
 import {useEffect, useState} from "react";
 import {LinkService} from "@/service/linkService";
-import History from "@/components/history/History"
+import History from "@/components/history/History";
 
 interface HistoryListProps {
   linkId: number

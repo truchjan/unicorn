@@ -1,9 +1,9 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import ErrorPage from "@/components/ErrorPage"
-import AppNavbar from "@/components/AppNavbar"
-import LinkList from "@/components/links/LinkList"
-import LinkForm from "@/components/links/LinkForm"
-import LinkPreview from "@/components/links/LinkPreview"
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import ErrorPage from "@/components/ErrorPage";
+import AppNavbar from "@/components/AppNavbar";
+import LinkList from "@/components/links/LinkList";
+import LinkForm from "@/components/links/LinkForm";
+import PreviewList from "@/components/preview/PreviewList";
 
 export const PATH_ROOT = '/'
 export const PATH_LINKS = '/links'
@@ -17,7 +17,7 @@ const MainRouter = () => {
       children: [
         {
           path: PATH_ROOT,
-          element: <LinkPreview />
+          element: <PreviewList />
         },
         {
           path: PATH_LINKS,

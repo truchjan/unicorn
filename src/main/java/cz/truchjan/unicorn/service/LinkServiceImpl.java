@@ -44,8 +44,8 @@ public class LinkServiceImpl implements LinkService {
 		link = historyService.addHistory(link, linkUpdated);
 		link.setName(linkUpdated.getName());
 		link.setUrl(linkUpdated.getUrl());
-		link.setImage(linkUpdated.getImage());
-		link.setDescription(linkUpdated.getDescription());
+		if(linkUpdated.getImage() != null) link.setImage(linkUpdated.getImage());
+		if(linkUpdated.getDescription() != null) link.setDescription(linkUpdated.getDescription());
 		link.setAvailableFirefox(linkUpdated.isAvailableFirefox());
 		link.setAvailableChrome(linkUpdated.isAvailableChrome());
 		link.setActive(linkUpdated.isActive());
