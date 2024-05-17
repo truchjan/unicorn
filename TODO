@@ -1,0 +1,10 @@
+- okomentovat BE metody + dokumentace (Swagger/openAPI)
+- návod na spuštění podobně jako v CTD
+- vyřešit obrázky
+- backend a frontend na stejné úrovni
+- junit testy
+
+
+CO CHYBÍ A NEBUDE (vygooglit aspoň jak bych to udělal)
+- validace - be i fe
+- lepší popup okno pro smazání linku - ideálně použít material ui
