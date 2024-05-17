@@ -9,6 +9,7 @@ import {LinkService} from "@/service/linkService";
 import {toast} from "react-toastify";
 import {PATH_LINK_FORM} from "@/components/MainRouter";
 import TextTruncate from "react-text-truncate";
+import ReadOnlyEditor from "@/components/wysiwyg/ReadOnlyEditor";
 
 interface TableLinkProps {
   link: LinkModel,
@@ -42,7 +43,7 @@ const TableLink = (props: TableLinkProps) => {
         </div>
 
         <div className="mt-4 w-full">
-          <div className="my-0 px-4"><TextTruncate line={2} text={props.link.description}/></div>
+          <div className="my-0 px-4" dangerouslySetInnerHTML={{ __html: props.link.description }} />
         </div>
 
         <div className="flex mt-4 pl-4 w-full">

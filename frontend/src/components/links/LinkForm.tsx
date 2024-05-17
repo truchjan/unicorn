@@ -1,13 +1,14 @@
 import { useNavigate, useParams } from "react-router-dom";
 import {useEffect, useState} from "react";
 import {LinkService} from "@/service/linkService";
-import {useForm} from "react-hook-form";
+import {Controller, useForm} from "react-hook-form";
 import {toast} from "react-toastify";
 import {PATH_LINKS} from "@/components/MainRouter";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { GrReturn } from "react-icons/gr";
 import HistoryList from "@/components/history/HistoryList";
 import {handleImageUpload} from "@/utils/handleImage";
+import Editor from "react-simple-wysiwyg";
 
 const LinkForm = () => {
 
@@ -15,6 +16,7 @@ const LinkForm = () => {
   const params = useParams()
 
   const [imagePreview, setImagePreview] = useState<string | undefined>()
+  const [formDescription, setFormDescription] = useState<string>()
 
   useEffect(() => {
     if(params.linkId) {
@@ -27,11 +29,12 @@ const LinkForm = () => {
         setValue("active", item?.active)
         setValue("newTab", item?.newTab)
         setImagePreview(item?.image)
+        setFormDescription(item?.description)
       })
     }
   }, [])
 
-  const {handleSubmit, setValue, register, formState: {errors}} = useForm({
+  const {handleSubmit, control, setValue, register, formState: {errors}} = useForm({
     defaultValues: {
       name: "",
       url: "",
@@ -63,6 +66,8 @@ const LinkForm = () => {
     if(data.image) {
       await handleImageUpload(data.image).then(item => data.image = item)
     }
+    data.image = imagePreview
+
     if(!params.linkId) {
       LinkService.createLink(data).then(item => {
         if(item.status === 201) {
@@ -118,10 +123,20 @@ const LinkForm = () => {
             <p className="text-rose-600 text-sm mt-1">{errors.url && errors.url.message}</p>
 
             <p className="my-1">Description</p>
-            <textarea className={"p-2 mb-4 w-11/12 h-24 focus:outline-none font-montserrat rounded-lg border-solid border-indigo-200 border-2"}
-                   placeholder="Description"
-                   {...register("description")}
-            />
+            <div className="mb-4 w-11/12 rounded-lg border-solid border-indigo-200 border-2">
+              <Controller control={control} name="description"
+                  render={() => (
+                      <Editor className={"font-montserrat"}
+                          value={formDescription}
+                          onChange={e => {
+                            setValue("description", e.target.value)
+                            setFormDescription(e.target.value)
+                          }}
+                      />
+                  )}
+              />
+            </div>
+
 
             <div className="grid grid-cols-2">
               <p className="my-1">Available in Firefox</p>
