@@ -2,9 +2,7 @@
 - návod na spuštění podobně jako v CTD
 - backend a frontend na stejné úrovni
 - junit testy
-- zkrátit výpis obrázku v postmanu
 - smazat tento soubor a chyby dát do readme
-- description v LinkFormu - WYSIWYG
 
 
 CO CHYBÍ A NEBUDE (vygooglit aspoň jak bych to udělal)
@@ -12,5 +10,4 @@ CO CHYBÍ A NEBUDE (vygooglit aspoň jak bych to udělal)
 - lepší popup okno pro smazání linku - ideálně použít material ui
 - přidat do historie i změnu obrázku
 - v historii by mohl bát časový údaj změny
-- WYSIWYG editor v preview???
 - chyby, které by odhalilo zevrubnější testování
