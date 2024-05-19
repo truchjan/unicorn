@@ -32,11 +32,11 @@
 # Co se nestihlo
 - bohužel je toho více, v případě zájmu rád cokoliv z následujících doplním
   - validace - délky vstupů, typy, mezní hodnoty a další
-  - junit testy
+  - unit testy
   - logování
   - zlepšení práce s obrázky
   - vlastní popup okno u mazání linku - např. z MaterialUI
   - do historie se momentálně nezapisují změny obrázků
-  - historie by mohla obsahovat časový údaj kdy ke změně došlo
+  - historie by mohla obsahovat časový údaj, kdy ke změně došlo
   - zevrubné ostestování, které by odhalilo další nedostatky
   - statická analýza kódu, která by odhalila další nedostatky (např. Sonarqube)
