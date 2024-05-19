@@ -15,7 +15,7 @@ const Preview = (props: PreviewProps) => {
       <a href={finalUrl} target={props.link.newTab ? "_blank" : ""} className="text-black no-underline">
         <div className="grid grid-cols-4 rounded-xl border-solid border-transparent hover:border-black cursor-pointer">
           <div className="flex items-center justify-center w-full h-20 m-2">
-            <img className="w-full" alt="image" src={props.link.image ? props.link.image : "/empty_icon.jpg"} />
+            <img className="w-full max-h-full" alt="image" src={props.link.image ? props.link.image : "/empty_icon.jpg"} />
           </div>
 
           <div className="col-span-3 pl-4">

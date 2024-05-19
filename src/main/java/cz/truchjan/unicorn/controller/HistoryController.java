@@ -16,6 +16,13 @@ public class HistoryController {
 
 	private final HistoryService historyService;
 
+	/**
+	 * Finds a link's history.
+	 *
+	 * @param linkId id of the link
+	 * @return history of the link
+	 * @throws ResourceNotFoundException thrown if link is not found
+	 */
 	@GetMapping(path = "")
 	public List<History> getLinksHistory(@PathVariable Long linkId) throws ResourceNotFoundException {
 		return historyService.getLinksHistory(linkId);
